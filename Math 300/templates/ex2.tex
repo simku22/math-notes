@@ -1,0 +1,20 @@
+\documentclass{article}
+
+\usepackage{amsmath,amsthm,amssymb}
+
+\begin{document}
+
+\begin{proof}
+  Let $t,u \in \mathbb{R}$ where $t=xy$ and $u=zw$. So,
+  \begin{align*}
+    4xyzw &= 2\cdot2tu \\
+    &\le 2\cdot(t^2+u^2) \\
+    &= 2\cdot((xy)^2+(zw)^2) &&\text{(substituting variables)} \\
+    &= 2\cdot(x^2y^2+z^2w^2) \\ 
+    &= 2x^2y^2+2z^2w^2 \\
+    &\le ((x^2)^2+(y^2)^2)+((z^2)^2)+(w^2)^2) \\
+    &= x^4+y^4+z^4+w^4 &&\qedhere
+  \end{align*}
+\end{proof}
+
+\end{document}

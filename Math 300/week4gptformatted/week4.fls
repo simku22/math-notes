@@ -1,6 +1,6 @@
-PWD /Users/simon/Desktop/math notes/Math 300
+PWD /Users/simon/Desktop/math notes/Math 300/week4gptformatted
 INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt
-INPUT /Users/simon/Desktop/math notes/Math 300/week4.tex
+INPUT /Users/simon/Desktop/math notes/Math 300/week4gptformatted/week4.tex
 OUTPUT week4.log
 INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/article.cls
 INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/article.cls
@@ -12,6 +12,8 @@ INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/a
 INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsfonts/amsfonts.sty
 INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsfonts/amssymb.sty
 INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsfonts/amssymb.sty
+INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amscls/amsthm.sty
+INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amscls/amsthm.sty
 INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsmath.sty
 INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsmath.sty
 INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsopn.sty
@@ -28,6 +30,9 @@ INPUT ./week4.aux
 INPUT ./week4.aux
 INPUT week4.aux
 OUTPUT week4.aux
+INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr17.tfm
+INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmti12.tfm
 INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr8.tfm
 INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr6.tfm
@@ -72,9 +77,7 @@ INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/type1
 INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsl12.pfb
 INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb
-INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msam10.pfb
+INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmti12.pfb
+INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmti12.pfb
 INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT /Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb

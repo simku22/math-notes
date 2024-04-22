@@ -11,7 +11,6 @@
                                                  	% and a page number on the right
 
 
-
 \newcommand{\eqn}[0]{\begin{array}{rcl}}%begin an aligned equation - allows for aligning = or inequalities.  Always use with $$ $$
 \newcommand{\eqnend}[0]{\end{array} }  	%end the aligned equation
 
@@ -44,7 +43,7 @@
 \textbf{Theorem 21}							% the Proposition number from the book (this one is fictitious)
 For all integers $a$ and $b$ with $b > 0$, there exist unique integers $q$ and $r$ such that $a = bq + r$, and $0 \leq r < b$.
 
-\textbf{Proof:}   
+\emph{\textbf{Proof:}}   
 Let $a = -5$ and $b = 2$. Then,
 
 \[
@@ -56,32 +55,34 @@ So, for $a = -5$ and $b = 2$, there exists a unique $q$ and $r$ belonging to the
 By, theorem 16, every integer is either odd or even.
 
 \textbf{Corollary 1} 
-For any integer a, b with $b > 1$, there exists a unique r in Z.
+For any integer a, b with $b > 1$, there exists a unique r $\in \mathbb{Z}$
 
 Such that a = r (mod b) and $0 \leq r < be$
 
 When $b = 3$, for any $z \in \mathbb{Z}$, there exists a unique integer $r$ such that $a \equiv r \pmod{3}$ and $r \in \{0, 1, 2\}$.
 
+\newpage
+
 \textbf{Theorem 21}	
 For every integer n, $n^3 = n (mod 3)$
 
-\textbf{Proof:}
-By corollary 1, we only have one of the three cases
+\emph{\textbf{Proof:}} By corollary 1, we only have one of the three cases
 
 Case 1: n = 0 (mod 3)
 
-\[
- 	n^3 \equiv n \pmod{3} \longrightarrow  3 \mid (n^3 - n)
-\]
+\begin{center}
 
-\[
-	3 \mid (n^3 - n) \longrightarrow (n)(n - 1)(n - 1)
-\]
+$n^3 \equiv n \pmod{3} \longrightarrow  3 \mid (n^3 - n)$
+
+$3 \mid (n^3 - n) \longrightarrow (n)(n - 1)(n - 1)$
 
 By theorem 20, we will have $n^3 = 0^3 \pmod{3}$
 
+\end{center}
 
-Remark: By reflexivity, $a \equiv b \!\pmod{n} \longrightarrow b \equiv a \pmod{n}$.
+\textbf{Remark:} 
+
+By reflexivity, $a \equiv b \!\pmod{n} \longrightarrow b \equiv a \pmod{n}$.
 
 Case 2: n = 1 (mod 3)
 
@@ -91,10 +92,12 @@ Similarly, $n = n^3(mod 3)$
 
 Case 3: n = 2 (mod 3)
 
+\newpage
+
 \textbf{Theorem 19}	
 Let n belong to Z, Then n is even if and only if $n^2$ is even. Similarly, n is odd if and only if $n^2$ is odd.
 
-\textbf{Proof:}
+\emph{\textbf{Proof:}}
 
 $\longrightarrow$
 
@@ -127,13 +130,18 @@ Suppose n is odd. THen n = 2k + 1 for some k in Z.
 \text{Since } 2k^2 + 2k \in \mathbb{Z}, \text{ } n^2 \text{ is odd.}
 \]
 
+\newpage
+
 \textbf{Revisit}
 Let $x \in \mathbb{R}$. We say $x$ is rational if there exist integers $p$ and $q$ with $q \neq 0$ such that $x = \frac{p}{q}$. We say $x$ is irrational if it is not rational.
 
 \textbf{Theorem 17:}
 $\sqrt{2}$ is not rational.
 
-\textbf{Proof:}
+\emph{\textbf{Proof:}}
+
+\begin{center}
+
 There exist $p, q \in \mathbb{Z}$ such that $\sqrt{2} = \frac{p}{q}$, $q \neq 0$.
 
 $2 = \frac{p^2}{q^2} \Rightarrow 2q^2 = p^2$
@@ -152,7 +160,11 @@ $\Rightarrow q$ is even ($q = 2L$, where $L \in \mathbb{Z}$)
 
 $\sqrt{2} = \frac{p}{q}$ p is negative and -p is positive.
 
+\end{center}
+
 \textbf{Rewriting:}
+
+\begin{center}
 
 Assume p is positive (if -p negative, we have $\sqrt{2} = \frac{-p}{-q}$ so we choose -p)
 
@@ -183,6 +195,8 @@ Since $k < p_0$, we have a contradiction.
 Hence, $\sqrt{2}$ is not rational.
 
 $\Box$
+
+\end{center}
 
 \textbf{Remark:} We use proof by contradiction, then we prove that the well ordering property is contradicted
 

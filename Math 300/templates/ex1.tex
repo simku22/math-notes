@@ -1,0 +1,31 @@
+\documentclass{amsart}
+\usepackage{lipsum}
+
+\newcommand{\mycommand}[2]{%
+    \par\addvspace{\baselineskip}
+    \noindent
+    \begin{minipage}[t]{0.19\textwidth}
+        \begin{flushright}
+            \textbf{#1}
+        \end{flushright}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.79\textwidth}
+        \begin{flushleft}
+            #2
+        \end{flushleft}
+    \end{minipage}
+    \par\addvspace{\baselineskip}
+}
+
+\begin{document}
+\lipsum[66]
+
+\mycommand{Theorem:}{If there is a quadratic form that is Lipschitz then there is an isotropic manifold locally resembling $\mathbb{H}[x]$ in the quotient of Ker$({\phi})$ and $\mathbb{H}^{n}\otimes G$}
+
+\mycommand{Proof:}{Let $\psi$ be a square-summable sequence in the rational quotient group. A simple application of trichotomy completes the proof, which is left as an exercise for the reader.}
+
+\mycommand{Proposition:}{Some proposition}
+
+\lipsum[75]
+\end{document}
