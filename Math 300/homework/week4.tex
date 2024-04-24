@@ -1,0 +1,187 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts, amssymb, amsthm}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\pagestyle{myheadings}
+\markright{Simon Kurgan\hfill Homework 4 \hfill}
+
+\newtheorem{theorem}{Problem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+
+\begin{document}
+
+\section{Assigned Problems}
+
+\begin{theorem}
+    For every $a, b, c \in \mathbb{R}$, if $a < b$ and $c > 0$, then $ac < bc$.
+\end{theorem}
+
+\begin{proof}[Proof:]
+    Suppose $a < b$ and $c > 0$.
+
+    If $b - a$ is positive, and $c$ is positive by Theorem 6
+
+    By positive closure, $(b-a)(c) \in \mathbb{R}$
+
+    If $ac < bc$, then $bc - ac > 0$
+    
+    By distributivity, $bc - ac$ = $c(b-a)$
+
+    By closure, $c(b-a) > 0$ thus satisfying $ac < bc$
+
+
+
+    % \begin{align*}
+    %     4xyzw &= 2\cdot2tu \\
+    %     &\le 2\cdot(t^2+u^2) \\
+    %     &= 2\cdot((xy)^2+(zw)^2) &&\text{(substituting variables)} \\
+    %     &= 2\cdot(x^2y^2+z^2w^2) \\ 
+    %     &= 2x^2y^2+2z^2w^2 \\
+    %     &\le ((x^2)^2+(y^2)^2)+((z^2)^2)+(w^2)^2) \\
+    %     &= x^4+y^4+z^4+w^4 &&\qedhere
+    % \end{align*}
+
+    % So, for $a = -5$ and $b = 2$, there exists a unique $q$ and $r$ belonging to the set of integers such that $a = 2q + r$ with $0 \leq r < 2$ (i.e., $r = 0$ or $1$).
+    
+    % By Theorem 16, every integer is either odd or even.
+\end{proof}
+
+\newpage
+
+\begin{theorem}
+For every $a, b \in \mathbb{R}$, $ab > 0$ if and only if $a$ and $b$ are both positive or both negative.
+\end{theorem}
+
+\begin{proof}[Proof:]
+
+    \textbf{$\longrightarrow$}
+
+    Suppose $ab > 0$
+    
+    Goal: $a, b \in \mathbb{R^+} \lor a, b \in \mathbb{R^-}$
+
+    \textbf{Case 1:} $a, b \in \mathbb{R^+}$
+
+    By closure of positive real numbers, $a * b \in \mathbb{R^+}$
+    
+    By theorem 6, such $(a * b) > 0$
+
+    \textbf{Case 2:} $a, b \in \mathbb{R^-}$
+    
+    QUESTION: If we prove case 1, why prove case 2? 
+
+    \textbf{$\longleftarrow$}
+
+    Suppose $a, b \in \mathbb{R^+} \lor a, b \in \mathbb{R^-}$
+
+    By conditional laws, 
+    
+    $(A \lor B) \implies C$ 
+    
+    $\equiv C \lor \lnot (A \land B)$ 
+
+    $\equiv C \lor (\lnot A \land \lnot B)$
+    
+    $\equiv (C \lor \lnot A) \land (C \lor \lnot B)$
+    
+    $(A \implies C) \land (B \implies C)$
+
+    % https://math.stackexchange.com/questions/4637016/how-to-prove-a-statement-of-a-or-b-implies-c
+
+\end{proof}
+
+\newpage
+
+\begin{theorem}
+For every integer $n$, $n^3 \equiv n \pmod{3}$.
+\end{theorem}
+
+\begin{proof}[Proof:]
+By Corollary 1, we only have one of the three cases:
+
+\textbf{Case 1:} $n \equiv 0 \pmod{3}$
+
+\[
+n^3 \equiv n \pmod{3} \longrightarrow  3 \mid (n^3 - n)
+\]
+\[
+3 \mid (n^3 - n) \longrightarrow (n)(n - 1)(n - 1)
+\]
+By Theorem 20, we have $n^3 \equiv 0^3 \pmod{3}$.
+
+\textbf{Case 2:} $n \equiv 1 \pmod{3}$
+
+Similarly, $n = n^3 \pmod{3}$.
+
+\textbf{Case 3:} $n \equiv 2 \pmod{3}$
+
+\end{proof}
+
+\newpage
+
+\begin{theorem}
+Let $n \in \mathbb{Z}$. Then $n$ is even if and only if $n^2$ is even. Similarly, $n$ is odd if and only if $n^2$ is odd.
+\end{theorem}
+
+\begin{proof}[Proof:]
+\textbf{$\longrightarrow$}
+
+Suppose $n$ is even. Goal: $n^2$ is even.
+
+Then $n = 2k$ for some $k \in \mathbb{Z}$.
+
+So, $n^2 = (2k) \times n = 2(kn)$, where $kn \in \mathbb{Z}$ by the closure of $\mathbb{Z}$.
+
+Hence, $n^2$ is even.
+
+\textbf{$\longleftarrow$}
+
+Need to prove: if $n^2$ is even, then $n$ is even.
+
+Contrapositive: If $n$ is not even, then $n^2$ is not even.
+
+By Theorem 16, if an integer is not even, then it is odd.
+
+Suppose $n$ is odd. Then $n = 2k + 1$ for some $k \in \mathbb{Z}$.
+
+\[
+\text{So, } n^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1.
+\]
+
+Since $2k^2 + 2k \in \mathbb{Z}$, $n^2$ is odd.
+\end{proof}
+
+\newpage
+
+\section{Revisit}
+
+Let $x \in \mathbb{R}$. We say $x$ is rational if there exist integers $p$ and $q$ with $q \neq 0$ such that $x = \frac{p}{q}$. We say $x$ is irrational if it is not rational.
+
+\begin{theorem}
+$\sqrt{2}$ is irrational.
+\end{theorem}
+
+\begin{proof}[Proof:]
+There exist $p, q \in \mathbb{Z}$ such that $\sqrt{2} = \frac{p}{q}$, $q \neq 0$.
+
+$2 = \frac{p^2}{q^2} \Rightarrow 2q^2 = p^2$
+
+$\Rightarrow p^2$ is even
+
+$\Rightarrow p$ is even ($p = 2k$, where $k \in \mathbb{Z}$)
+
+$\Rightarrow 2q^2 = (2k)^2 = 4k^2$.
+
+$q^2 = 2k^2$
+
+$\Rightarrow q^2$ is even
+
+$\Rightarrow q$ is even ($q = 2L$, where $L \in \mathbb{Z}$)
+
+$\sqrt{2} = \frac{p}{q}$ p is negative and $-p$ is positive.
+\end{proof}
+
+\textbf{Remark:} We use proof by contradiction, then we prove that the well-ordering property is contradicted.
+
+\end{document}

@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1713827884.67814 "/Users/simon/Desktop/math notes/Math 300/week4gptformatted/week4.tex" "week4.pdf" "week4" 1713827885.19083 0
-  "/Users/simon/Desktop/math notes/Math 300/week4gptformatted/week4.tex" 1713827883.88052 3211 518952eaf24f5c931f120cdff187ac3a ""
+["pdflatex"] 1713843388.61873 "/Users/simon/Desktop/math notes/Math 300/week4gptformatted/week4.tex" "week4.pdf" "week4" 1713843389.01231 0
+  "/Users/simon/Desktop/math notes/Math 300/week4gptformatted/week4.tex" 1713843388.00945 3211 518952eaf24f5c931f120cdff187ac3a ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1713827037.62723 26529 7ef40f24a0188fbc1af9e9610e5bb7ee ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1713507748.68124 21059050 cba3634c8d406899dd9f4d403ac127d9 ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1713507756.50835 1004 54797486969f23fa377b128694d548df ""
@@ -46,8 +46,8 @@
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/article.cls" 1713507723.392 20144 147463a6a579f4597269ef9565205cfe ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/size12.clo" 1713507723.39106 8449 f07039d8e4e89f21078d9b5137579bfc ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def" 1713507753.92659 29918 d08e4795c0778dfb000e82d9225c6ce2 ""
-  "week4.aux" 1713827885.05327 227 a0b55643a2d0bf18f1722e16db37ce5f "pdflatex"
-  "week4.tex" 1713827883.88052 3211 518952eaf24f5c931f120cdff187ac3a ""
+  "week4.aux" 1713843388.91234 227 a0b55643a2d0bf18f1722e16db37ce5f "pdflatex"
+  "week4.tex" 1713843388.00945 3211 518952eaf24f5c931f120cdff187ac3a ""
   (generated)
   "week4.aux"
   "week4.log"
