@@ -1,0 +1,140 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts, amssymb, amsthm}
+\usepackage{amsmath}
+
+\pagestyle{myheadings}
+\markright{Simon Kurgan\hfill\today\hfill}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+
+\begin{document}
+
+\section{Introduction}
+
+\begin{theorem}
+    A sequence is an infinite list of numbers that are indexed by $\mathbb{N}$ or a subset of $\mathbb{N}$. We can often write a sequence in the form $a_1, a_2, ... a_n$
+\end{theorem}
+
+\begin{proof}[Example:]
+    $(A_n)_{n=0}^\infty$
+\end{proof}
+
+\begin{theorem}
+    We can define a sequence recursively (recursive definition). The Fibonacci sequence $f_n$ is defined as follows:
+\end{theorem}
+
+\begin{proof}[Example:]
+    \[
+    f_n = 
+        \begin{cases}
+        f_0 = 1, f_1 = 1 \\
+        f_{n+2} = f_{n+1} + f_n \text{ if } n \geq 0.
+        \end{cases}
+    \]
+\end{proof}
+
+\newpage
+
+\begin{theorem}
+    For each $n \in \mathbb{N}$, the Fibonacci number $f_{3n}$ is an even natural number.
+\end{theorem}
+
+\begin{proof}[Proof:]
+    We prove this by induction.
+
+    Base case: when $n = 0, f_0$ is even.
+
+    Inductive step: Suppose $f_{3k}$ is even for some $k \geq 0$
+
+    We want to prove $f_{3(k+1)}$ is even
+
+    Note $f_{3(k+1)}$ = $f_{3k+3}$
+
+    By the recursive definition, $f_{3k+3}$ = $f_{3k+2}$ + $f_{3k+1}$
+
+    Further simplifying, ($f_{3k+1}$ + $f_{3k}$) + $f_{3k+1}$
+
+    $2f_{3k+1} + f_{3k}$
+
+    Substituting, $2f_{3k+1} + 2L$
+
+    Thus, $2(f_{3k+1} + L)$ is even.
+
+    By the closure of the set of integers and the recursive definition, this is an integer.
+
+    By induction, this statement is true for any $\mathbb{N}$ 
+\end{proof}
+
+\newpage
+
+\begin{theorem}
+    How many ways can you tile a 2 by n grid with dominoes?
+\end{theorem}
+
+\begin{proof}[Illustrated:]
+
+    Working from a simpler case, suppose n = 1. There is only one way to fill the grid.
+
+    When n = 2, there are only two ways like such $\|$ and $=$
+
+    When n = 3, there are 3 ways in which you can tile the dominoes
+
+    When n = 4, there are 5 ways.
+
+    When n = 5, there are 8 ways.
+\end{proof}
+
+\begin{proof}[Illustrated:]
+    For any integer $n \geq 1$, the number of ways to tile a 2 by n grid with dominoes is the (n+1)th Fibonacci number, $f_{n+1}$
+
+    Recall,
+
+    \[
+    f_n = 
+        \begin{cases}
+        f_0 = 1, f_1 = 1 \\
+        f_{n+2} = f_{n+1} + f_n \text{ if } n \geq 0.
+        \end{cases}
+    \]
+
+    Proof using induction.
+
+    Base Case: 
+    
+    Suppose n = 1. There is 1 way to tile a 2 by 1 grid and $f_1 = 1$
+
+    Suppose n = 2. There are 2 ways to tile a 2 by 2 grid and $f_3 = 2$
+
+    Inductive Case: 
+    
+    Suppose the number of ways to tile an n by k grid is $f_{k + 1}$
+
+    Suppose the number of ways to tile a 2 by (k + 1) grid is $f_{k + 2}$
+
+    Goal: Find out the number of ways to tile a 2 by (k + 2) grid.
+
+    Consider the top left square of this 2 by (k + 2) grid.
+
+    There are only two ways in which it can be covered
+
+    Case 1: 
+
+    This square is covered by a vertical d.
+
+    The remaining part is a 2 by (k + 1) grid.
+
+    By the inductive hypothesis, there are $f_{k + 2}$ to cover the grid.
+
+    Case 2:
+
+    The square is covered by a horizontal d.
+
+    The square underneath it must be covered by a horizontal domino.
+
+    The remaining grid is a 2 by k grid. Which has $f_{k + 1}$ ways to tile.
+\end{proof}
+
+\newpage
+
+\end{document}

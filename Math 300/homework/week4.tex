@@ -2,6 +2,7 @@
 \usepackage{amsfonts, amssymb, amsthm}
 \usepackage{amsmath}
 \usepackage{amsthm}
+\usepackage{array}
 
 \pagestyle{myheadings}
 \markright{Simon Kurgan\hfill Homework 4 \hfill}
@@ -20,15 +21,17 @@
 \begin{proof}[Proof:]
     Suppose $a < b$ and $c > 0$.
 
-    If $b - a$ is positive, and $c$ is positive by Theorem 6
+    By order axioms $b - a$ is positive, and $c$ is positive by Theorem 6
 
-    By positive closure, $(b-a)(c) \in \mathbb{R}$
+    By closure, $(b-a)(c) \in \mathbb{R^+}$
 
-    If $ac < bc$, then $bc - ac > 0$
+    If $ac < bc$, then by order axioms we can write $bc - ac > 0$
     
     By distributivity, $bc - ac$ = $c(b-a)$
 
-    By closure, $c(b-a) > 0$ thus satisfying $ac < bc$
+    By commutativity, $c * (b-a) = (b-a) * c$
+
+    By above closure, $c * (b-a) > 0$ thus satisfying $ac < bc$
 
 
 
@@ -61,127 +64,135 @@ For every $a, b \in \mathbb{R}$, $ab > 0$ if and only if $a$ and $b$ are both po
     
     Goal: $a, b \in \mathbb{R^+} \lor a, b \in \mathbb{R^-}$
 
-    \textbf{Case 1:} $a, b \in \mathbb{R^+}$
+    By the trichotomy of real numbers, there exist 3 possibilities for both $a, b$
 
-    By closure of positive real numbers, $a * b \in \mathbb{R^+}$
-    
-    By theorem 6, such $(a * b) > 0$
+    Thus, $3 * 3 = 9$ total combinations
 
-    \textbf{Case 2:} $a, b \in \mathbb{R^-}$
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            \textbf{Case \#} & a & b \\
+            \hline
+            1 & $a > 0$ & $b > 0$ \\ 
+            2 & $a > 0$ & $b < 0$ \\  
+            3 & $a > 0$ & $b = 0$ \\  
+            4 & $a < 0$ & $b > 0$ \\ 
+            5 & $a < 0$ & $b < 0$ \\ 
+            6 & $a < 0$ & $b = 0$ \\ 
+            7 & $a = 0$ & $b > 0$ \\ 
+            8 & $a = 0$ & $b < 0$ \\  
+            9 & $a = 0$ & $b = 0$ \\  
+            \hline
+        \end{tabular}
+    \end{center}
+
+    Cases 3, 6, 7, 8 where either $(a = 0)$ or $(b = 0)$ by Theorem 4 equate to 0, because some $a * 0 = 0$ where $a \in \mathbb{R}$.
     
-    QUESTION: If we prove case 1, why prove case 2? 
+    This contradicts $a * b > 0$ because $a * b = 0$ in all 4 cases.
+
+    Similarly, case 9 where both $a, b = 0$
+
+    By theorem 4, $a * 0 = 0$, thus $0 * 0 = 0$
+
+    By substitution, we can rewrite $0 * 0 = 0$ as $a * b = 0$
+
+    This contradicts $a * b > 0$ and the trichotomy principle.
+
+    Thus remains, 
+
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            \textbf{Case \#} & a & b \\
+            \hline
+            1 & $a > 0$ & $b > 0$ \\ 
+            2 & $a > 0$ & $b < 0$ \\  
+            4 & $a < 0$ & $b > 0$ \\ 
+            5 & $a < 0$ & $b < 0$ \\ 
+            \hline
+        \end{tabular}
+    \end{center}
+
+    \newpage
+
+    For case 1, suppose both $a, b > 0$
+
+    By theorem 6, both a, b are positive.
+
+    By positive closure, $a * b \in \mathbb{R^+}$, by definition $a * b$ is positive and $a * b > 0$
+
+    Our result is consistent with $ab > 0$
+
+    For case 2, suppose $a > 0$ and $b < 0$
+
+    By theorem 6, a is positive.
+
+    By order axioms and negativity, $b < 0 \equiv -b > 0$ 
+
+    By positive closure, $-b * a \in \mathbb{R^+}$.
+
+    By multiplication, $-b * a \equiv -ba$.
+
+    By order axioms and the definition of positivity, if $-ba \in \mathbb{R^+}$ then $-(-ba) \in \mathbb{R^-}$.
+
+    By E7, $-(-ba) = ba$
+
+    By commutativity, $ba = ab$
+
+    Thus, we derive $ab \in \mathbb{R^-}$, but this contradicts our hypothesis.
+
+    For case 4, suppose $a < 0$ and $b > 0$
+
+    By theorem 6, a is positive.
+
+    By order axioms, $a < 0 \equiv -a > 0$
+
+    By positive closure, $-a * b \in \mathbb{R}$
+
+    By multiplication, $-a * b = -ab$
+
+    By order axioms and the definition of positivity, if $-ab \in \mathbb{R^+}$ then $-(-ab) \in \mathbb{R^-}$.
+
+    By E7, $-(-ab) = ab$
+
+    Thus, we derive $ab \in \mathbb{R^-}$, but this contradicts our hypothesis.
+
+    The final case 5, in which $a, b < 0$
+
+    By positivity and order axioms $a < 0$ then $-a > 0$ and similarly $b < 0$ then $-b > 0$.
+
+    By positive closure, $-a * -b \in \mathbb{R^+}$.
+
+    By theorem e11, $-a * -b = ab$
+
+    Thus we have $ab \in \mathbb{R^+}$.
+
+    The only affirming cases here are 1, 5 where $a,b \in \mathbb{R^+}$ or $a, b \in \mathbb{R^+}$
+
+    Thus satisfying this statement.
 
     \textbf{$\longleftarrow$}
 
     Suppose $a, b \in \mathbb{R^+} \lor a, b \in \mathbb{R^-}$
 
-    By conditional laws, 
-    
-    $(A \lor B) \implies C$ 
-    
-    $\equiv C \lor \lnot (A \land B)$ 
+    Case 1: $a, b \in \mathbb{R^+}$
 
-    $\equiv C \lor (\lnot A \land \lnot B)$
-    
-    $\equiv (C \lor \lnot A) \land (C \lor \lnot B)$
-    
-    $(A \implies C) \land (B \implies C)$
+    By positive closure, $a * b \in \mathbb{R^+}$
 
-    % https://math.stackexchange.com/questions/4637016/how-to-prove-a-statement-of-a-or-b-implies-c
+    By theorem 6 and positivity, $a * b > 0$
 
-\end{proof}
+    \newpage
 
-\newpage
+    Case 2: $a, b \in \mathbb{R^-}$
 
-\begin{theorem}
-For every integer $n$, $n^3 \equiv n \pmod{3}$.
-\end{theorem}
+    By negativity and order axioms if $a < 0$ then $-a > 0$ and similarly if $b < 0$ then $-b > 0$.
 
-\begin{proof}[Proof:]
-By Corollary 1, we only have one of the three cases:
+    By positive closure, $-a * -b \in \mathbb{R^+}$.
 
-\textbf{Case 1:} $n \equiv 0 \pmod{3}$
+    By theorem E11, $-a * -b = ab$
 
-\[
-n^3 \equiv n \pmod{3} \longrightarrow  3 \mid (n^3 - n)
-\]
-\[
-3 \mid (n^3 - n) \longrightarrow (n)(n - 1)(n - 1)
-\]
-By Theorem 20, we have $n^3 \equiv 0^3 \pmod{3}$.
-
-\textbf{Case 2:} $n \equiv 1 \pmod{3}$
-
-Similarly, $n = n^3 \pmod{3}$.
-
-\textbf{Case 3:} $n \equiv 2 \pmod{3}$
+    By positivity and theorem 6, $ab > 0$
 
 \end{proof}
-
-\newpage
-
-\begin{theorem}
-Let $n \in \mathbb{Z}$. Then $n$ is even if and only if $n^2$ is even. Similarly, $n$ is odd if and only if $n^2$ is odd.
-\end{theorem}
-
-\begin{proof}[Proof:]
-\textbf{$\longrightarrow$}
-
-Suppose $n$ is even. Goal: $n^2$ is even.
-
-Then $n = 2k$ for some $k \in \mathbb{Z}$.
-
-So, $n^2 = (2k) \times n = 2(kn)$, where $kn \in \mathbb{Z}$ by the closure of $\mathbb{Z}$.
-
-Hence, $n^2$ is even.
-
-\textbf{$\longleftarrow$}
-
-Need to prove: if $n^2$ is even, then $n$ is even.
-
-Contrapositive: If $n$ is not even, then $n^2$ is not even.
-
-By Theorem 16, if an integer is not even, then it is odd.
-
-Suppose $n$ is odd. Then $n = 2k + 1$ for some $k \in \mathbb{Z}$.
-
-\[
-\text{So, } n^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1.
-\]
-
-Since $2k^2 + 2k \in \mathbb{Z}$, $n^2$ is odd.
-\end{proof}
-
-\newpage
-
-\section{Revisit}
-
-Let $x \in \mathbb{R}$. We say $x$ is rational if there exist integers $p$ and $q$ with $q \neq 0$ such that $x = \frac{p}{q}$. We say $x$ is irrational if it is not rational.
-
-\begin{theorem}
-$\sqrt{2}$ is irrational.
-\end{theorem}
-
-\begin{proof}[Proof:]
-There exist $p, q \in \mathbb{Z}$ such that $\sqrt{2} = \frac{p}{q}$, $q \neq 0$.
-
-$2 = \frac{p^2}{q^2} \Rightarrow 2q^2 = p^2$
-
-$\Rightarrow p^2$ is even
-
-$\Rightarrow p$ is even ($p = 2k$, where $k \in \mathbb{Z}$)
-
-$\Rightarrow 2q^2 = (2k)^2 = 4k^2$.
-
-$q^2 = 2k^2$
-
-$\Rightarrow q^2$ is even
-
-$\Rightarrow q$ is even ($q = 2L$, where $L \in \mathbb{Z}$)
-
-$\sqrt{2} = \frac{p}{q}$ p is negative and $-p$ is positive.
-\end{proof}
-
-\textbf{Remark:} We use proof by contradiction, then we prove that the well-ordering property is contradicted.
 
 \end{document}

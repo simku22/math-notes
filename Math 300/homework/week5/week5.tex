@@ -1,0 +1,212 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts, amssymb, amsthm}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{array}
+
+\pagestyle{myheadings}
+\markright{Simon Kurgan\hfill Homework 5 \hfill}
+
+\newtheorem{theorem}{Problem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+
+\begin{document}
+
+\section{Assigned Problems}
+
+\begin{theorem}
+    For each integer n, if n is odd, then $8 | (n^2 - 1)$
+\end{theorem}
+
+\begin{proof}[Proof:]
+
+    Suppose n is odd.
+
+    By definition, $n = 2L + 1$, where $L \in Z$
+
+    By trichotomy we have 3 possible cases for L.
+
+    \[
+        \begin{aligned}
+        1. &\ L > 0 \\
+        2. &\ L = 0 \\
+        3. &\ L < 0 \\
+        \end{aligned}
+    \]
+
+    Because we are only considering integers,
+
+    \[
+        \begin{aligned}
+        1. &\ L \geq 1 \\
+        2. &\ L = 0 \\
+        3. &\ L \leq -1 \\
+        \end{aligned}
+    \]
+
+    We proceed with proof by induction in the case where $L \geq 1$
+
+    \medskip
+
+    \textbf{Base Case:} Suppose L = 1. 
+    
+    n = 2(1) + 1 = 3
+    
+    $8 | ((3)^2 - 1)$ = $8 | (9 - 1)$ = $8 | 8$
+
+    By Theorem 10, $8 | 8$  
+    
+    \medskip
+
+    \textbf{Induction Step:} Suppose $8 | ((2L+1)^2 - 1)$
+
+    By definition, $((2L + 1)^2 - 1) = 8 * b$, $b \in \mathbb{Z}$
+
+    Expanding, $4L^2 + 4L = 8 * b$
+
+    $4L^2 + 4L = 8b$
+
+    \medskip
+
+    \textbf{Goal:} Prove $8 | ((2(L + 1) + 1)^2 - 1)$
+
+    Simplifying $((2(L + 1) + 1)^2 - 1)$, we have $((2L + 3)^2 - 1)$
+
+    Expanding, $4L^2 + 12L + 8$
+
+    By additive identity, $4L^2 + 12L + 8 = 4L^2 + 12L + 8 + 0$
+
+    By additive inverse, $(4L - 4L) = 0$
+
+    $4L^2 + 12L + 8 + (4L - 4L) = 4L^2 + 4L + 8L + 8$
+
+    Substituting, $8b + 8L + 8$, $b, L \in \mathbb{Z}$
+
+    8(b + L + 1), $b, L \in \mathbb{Z}$
+
+    By integer closure, $(b + L + 1)$ is equal to some $ k \in \mathbb{Z}$
+
+    Rewriting, we have $8 | 8k$
+
+    By definition, this presumes that $8k = 8b$ for $k, b \in \mathbb{Z}$
+
+    By theorem 1, k = b for $k, b \in \mathbb{Z}$
+
+    In any case where k = b, $8 | 8k$
+
+    By definition, $8 | ((2(L + 1) + 1)^2 - 1)$
+
+    \medskip
+
+    We now evaluate the case where L = 0
+
+    By substitution, n = 2(0) + 1 = 1
+
+    \textbf{Goal:} Show $8 | ((1)^2 - 1)$
+
+    Simplifying, $(1 * 1) = 1$ and $1 - 1 = 0$
+
+    Thus, we have $8 | 0$
+
+    Rewriting, $0 = 8 * k$, $k \in \mathbb{Z}$
+
+    By E8, there exists $k = 0$ such that 8 * 0 = 0
+
+    Therefore, $8 | 0$ and that when $L = 0$, $n | 0$
+
+    \medskip
+
+    We now evaluate the case where $L \leq -1$ using induction
+
+    \medskip
+
+    \textbf{Base Case:} Suppose $L = -1$. 
+    
+    $n = 2(-1) + 1 = -2 + 1 = -1$
+    
+    Substuting, $8 | ((-1)^2 - 1)$
+
+    Simplifying, $8 | 0$
+
+    By definition, $0 = 8 * k$
+
+    By E8, there exists $k = 0$ such that 8 * 0 = 0
+
+    Therefore, $8 | 0$ and also $8 | (n^2 - 1)$ when $L = -1$
+
+    \medskip
+
+    \textbf{Induction Step:} Suppose $8 | ((2L+1)^2 - 1)$
+
+    By definition, $((2L + 1)^2 - 1) = 8 * b$, $b \in \mathbb{Z}$
+
+    Expanding, $4L^2 + 4L = 8 * b$
+
+    $4L^2 + 4L = 8b$
+
+    \medskip
+
+    \textbf{Goal:} Prove $8 | ((2(L + 1) + 1)^2 - 1)$
+
+    Simplifying $((2(L + 1) + 1)^2 - 1)$, we have $((2L + 3)^2 - 1)$
+
+    Expanding, $4L^2 + 12L + 8$
+
+    By additive identity, $4L^2 + 12L + 8 = 4L^2 + 12L + 8 + 0$
+
+    By additive inverse, $(4L - 4L) = 0$
+
+    $4L^2 + 12L + 8 + (4L - 4L) = 4L^2 + 4L + 8L + 8$
+
+    Substituting, $8b + 8L + 8$, $b, L \in \mathbb{Z}$
+
+    8(b + L + 1), $b, L \in \mathbb{Z}$
+
+    By integer closure, $(b + L + 1)$ is equal to some $ k \in \mathbb{Z}$
+
+    Rewriting, we have $8 | 8k$
+
+    By definition, this presumes that $8k = 8b$ for $k, b \in \mathbb{Z}$
+
+    By theorem 1, k = b for $k, b \in \mathbb{Z}$
+
+    In any case where k = b, $8 | 8k$
+
+    By definition, $8 | ((2(L + 1) + 1)^2 - 1)$
+    
+\end{proof}
+
+\newpage
+
+\begin{theorem}
+    For every integer n, $n^3 \equiv n \Mod{3}$
+\end{theorem}
+
+\textbf{Lemma 1:} For integers $a, b \in \mathbb{Z}$ with $b > 1$, there exists a unique r such that $a \equiv r \Mod{b}$ where $0 \le r < b$
+
+\begin{proof}[Proof:]
+    By Lemma 1, we must have one of the three following cases.
+
+    \textbf{Case 1:} $n \equiv 0 \Mod{3}$
+
+    By Theorem 20, $n^3 \equiv 0^3 \Mod{3}$
+
+    Simplifying, $n^3 \equiv 0 \Mod{3}$
+
+    By Problem 5 Week 4, $n^3 \equiv n \Mod{3}$
+
+    \textbf{Case 1:} $n \equiv 1 \Mod{3}$
+
+    By Theorem 20, $n^3 \equiv 1^3 \Mod{3}$
+
+    Similarly, $n^3 \equiv n \Mod{3}$
+
+    \textbf{Case 1:} $n \equiv 2 \Mod{3}$
+
+    By Theorem 20, $n^3 \equiv 2^3 \Mod{3}$
+
+    Simplifying, $n^3 \equiv 8 \Mod{3}$
+\end{proof}
+
+\end{document}

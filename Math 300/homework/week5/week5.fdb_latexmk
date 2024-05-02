@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1714019073.23858 "/Users/simon/Desktop/math notes/Math 300/homework/week4.tex" "week4.pdf" "week4" 1714019073.68991 0
-  "/Users/simon/Desktop/math notes/Math 300/homework/week4.tex" 1714019071.76468 5298 639c2d0664ce1db76f6c1ae95db004a0 ""
-  "/Users/simon/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1713827037.62723 26529 7ef40f24a0188fbc1af9e9610e5bb7ee ""
+["pdflatex"] 1714617900.57999 "/Users/simon/Desktop/math notes/Math 300/homework/week5/week5.tex" "week5.pdf" "week5" 1714617900.99819 0
+  "/Users/simon/Desktop/math notes/Math 300/homework/week5/week5.tex" 1714617900.01258 4621 65cfae2c8629ba20dbe04cd2ab5ba5bd ""
+  "/Users/simon/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1714267020.57144 29620 08924db72b8cdfc49e1cead56872ef3d ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1713507748.68124 21059050 cba3634c8d406899dd9f4d403ac127d9 ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1713507756.50835 1004 54797486969f23fa377b128694d548df ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1713507756.50852 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -29,7 +29,6 @@
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1713507756.56961 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsl12.pfb" 1713507756.57434 34586 5a65dc15601f9c74fe3fb3f37b3b8b6f ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1713507756.59909 32569 5e5ddc8df908dea60932f3c484a54c0d ""
-  "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1713507756.60494 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1713507756.6141 36118 fad905eba93cff5bce1e185fe980a177 ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1713507756.69336 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amscls/amsthm.sty" 1713683205.2792 12594 0d51ac3a545aaaa555021326ff22a6cc ""
@@ -46,10 +45,10 @@
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/size12.clo" 1713507723.39106 8449 f07039d8e4e89f21078d9b5137579bfc ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def" 1713507753.92659 29918 d08e4795c0778dfb000e82d9225c6ce2 ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/tools/array.sty" 1713683207.71106 12667 e4b5eb11e4b7239e6c8a52bbe074a6c6 ""
-  "week4.aux" 1714019073.57254 137 07f1f0a6c69993f582e096288472bc74 "pdflatex"
-  "week4.tex" 1714019071.76468 5298 639c2d0664ce1db76f6c1ae95db004a0 ""
+  "week5.aux" 1714617900.89388 137 07f1f0a6c69993f582e096288472bc74 "pdflatex"
+  "week5.tex" 1714617900.01258 4621 65cfae2c8629ba20dbe04cd2ab5ba5bd ""
   (generated)
-  "week4.aux"
-  "week4.log"
-  "week4.pdf"
+  "week5.aux"
+  "week5.log"
+  "week5.pdf"
   (rewritten before read)
