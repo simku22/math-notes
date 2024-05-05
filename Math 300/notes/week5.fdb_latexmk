@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1714602033.60289 "/Users/simon/Desktop/math notes/Math 300/notes/week5.tex" "week5.pdf" "week5" 1714602034.05635 0
-  "/Users/simon/Desktop/math notes/Math 300/notes/week5.tex" 1714602032.75935 3388 bcea58bd64e741aef0e7efc4bab2c815 ""
-  "/Users/simon/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1714267020.57144 29620 08924db72b8cdfc49e1cead56872ef3d ""
+["pdflatex"] 1714772634.87596 "/Users/simon/Desktop/math notes/Math 300/notes/week5.tex" "week5.pdf" "week5" 1714772635.32827 0
+  "/Users/simon/Desktop/math notes/Math 300/notes/week5.tex" 1714772634.07966 3870 8513e993349193d299982f313c9ef28c ""
+  "/Users/simon/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1714627925.48758 29620 08924db72b8cdfc49e1cead56872ef3d ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1713507748.68124 21059050 cba3634c8d406899dd9f4d403ac127d9 ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1713507756.50835 1004 54797486969f23fa377b128694d548df ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1713507756.50852 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -47,8 +47,8 @@
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/article.cls" 1713507723.392 20144 147463a6a579f4597269ef9565205cfe ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/size12.clo" 1713507723.39106 8449 f07039d8e4e89f21078d9b5137579bfc ""
   "/Users/simon/Library/Application Support/MiKTeX/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def" 1713507753.92659 29918 d08e4795c0778dfb000e82d9225c6ce2 ""
-  "week5.aux" 1714602033.94633 132 a7d2076499674f561a22e638385c12f7 "pdflatex"
-  "week5.tex" 1714602032.75935 3388 bcea58bd64e741aef0e7efc4bab2c815 ""
+  "week5.aux" 1714772635.21813 132 d66df6e88381fb78a23c49b76b4ce871 "pdflatex"
+  "week5.tex" 1714772634.07966 3870 8513e993349193d299982f313c9ef28c ""
   (generated)
   "week5.aux"
   "week5.log"

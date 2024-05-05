@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{array}
+\usepackage{scrextend}
 
 \pagestyle{myheadings}
 \markright{Simon Kurgan\hfill Homework 5 \hfill}
@@ -14,6 +15,78 @@
 \begin{document}
 
 \section{Assigned Problems}
+
+
+\begin{theorem}
+    For each integer n, if n is odd, then $8 | (n^2 - 1)$
+\end{theorem}
+
+\textbf{Lemma 1:} For every integer n, $n^2 + n$ is even
+
+\textit{Proof:} By theorem 16, we assert that an integer n is be either even or odd. Thus we have two cases.
+
+\medskip
+
+Case 1: n is odd.
+
+By definition, $n = 2k + 1$, where $k \in Z$
+
+Substituting, $(n^2 + n)$ becomes $((2k + 1)^2 + (2k + 1))$
+
+Expanding and simplifying, $4k^2 + 6k + 2 = 2(2k^2 + 3k + 1)$
+
+By closure, $2k^2 + 3k + 1$ is an integer.
+
+By definition, $2(2k^2 + 3k + 1)$ is even.
+
+\medskip
+
+Case 2: n is even.
+
+By definition, $n = 2k$, where $k \in Z$
+
+Substituting, $(n^2 + n)$ becomes $((2k)^2 + (2k))$
+
+Expanding, $((2k)^2 + (2k))$ = $(4k^2 + 2k)$
+
+Simplifying, $(4k^2 + 2k)$ = $2(k^2 + k)$
+
+By definition, $2(k^2 + k)$ is even.
+
+\medskip
+
+Thus for every integer n, $n^2 + n$ is even.
+
+\begin{proof}[Proof:]
+    Suppose n is odd.
+
+    By definition, $n = 2k + 1$, where $k \in Z$
+
+    We can write $8 | ((2k + 1)^2 - 1)$
+
+    By definition, $((2k + 1)^2 - 1) = 8 * b$, $b, k \in \mathbb{Z}$
+
+    Expanding, $4k^2 + 4k = 8 * b$, $b, k \in \mathbb{Z}$
+
+    $4k^2 + 4k = 8b$, $b, k \in \mathbb{Z}$
+
+    By Lemma 1, $k^2 + k = 2p$, $p, k \in \mathbb{Z}$
+
+    Rewriting, we have $4(2p) = 8b$, $p, b \in \mathbb{Z}$
+
+    Simplifying, $8p = 8b$, $p, b \in \mathbb{Z}$
+
+    By defn, p is divisible by 8.
+
+    Thus, we can write $((2k + 1)^2 - 1) = 8 * b$, $b, k \in \mathbb{Z}$
+
+    Rewritten, $(n^2 - 1) = 8 * b$, $b \in \mathbb{Z}$
+
+    From this we can conclude that if n is odd, then $8 | (n^2 - 1)$
+
+\end{proof}
+
+\newpage
 
 \begin{theorem}
     For each integer n, if n is odd, then $8 | (n^2 - 1)$
@@ -186,7 +259,7 @@
 \textbf{Lemma 1:} For integers $a, b \in \mathbb{Z}$ with $b > 1$, there exists a unique r such that $a \equiv r \Mod{b}$ where $0 \le r < b$
 
 \begin{proof}[Proof:]
-    By Lemma 1, we must have one of the three following cases.
+    By Lemma 1, we have the three following cases.
 
     \textbf{Case 1:} $n \equiv 0 \Mod{3}$
 
@@ -196,17 +269,130 @@
 
     By Problem 5 Week 4, $n^3 \equiv n \Mod{3}$
 
-    \textbf{Case 1:} $n \equiv 1 \Mod{3}$
+    \textbf{Case 2:} $n \equiv 1 \Mod{3}$
 
     By Theorem 20, $n^3 \equiv 1^3 \Mod{3}$
 
-    Similarly, $n^3 \equiv n \Mod{3}$
+    $n^3 \equiv 1 \Mod{3}$
 
-    \textbf{Case 1:} $n \equiv 2 \Mod{3}$
+    By Problem 5 Week 4, $n^3 \equiv n \Mod{3}$
+
+    \textbf{Case 3:} $n \equiv 2 \Mod{3}$
 
     By Theorem 20, $n^3 \equiv 2^3 \Mod{3}$
 
     Simplifying, $n^3 \equiv 8 \Mod{3}$
+
+    Goal: Establish that $8 \Mod{3} \equiv 2 \Mod{3}$
+
+    Calculating both, we have $8 \Mod{3} = 2$, and $2 \Mod{3} = 2$
+
+    Since they are equal, $n^3 \equiv 2 \Mod{3}$
+
+    By Problem 5 Week 4 Part, $n^3 \equiv n \Mod{3}$
+
+    \medskip
+    
+    We can see that regardless of the congruence class (and individual cases), we have $n^3 \equiv n \Mod{3}$ for every integer n.
+\end{proof}
+
+\newpage
+
+\begin{theorem}
+    Let $N = \{ 0, 1, 2, . . . \} $ be the set of natural numbers. Prove for $n \in N$, we must
+have 6 divides $(n^3 - n)$.
+\end{theorem}
+
+\textbf{Lemma 1:} For integers $a, b \in \mathbb{Z}$ with $b > 1$, there exists a unique r such that $a \equiv r \Mod{b}$ where $0 \le r < b$
+
+\begin{proof}[Proof:]
+    By definition, $6 | (n^3 - n)$ can be written as $n^3 \equiv n \Mod{6}$
+
+    By Lemma 1, we have the following 6 cases
+
+    \medskip
+
+    \textbf{Case 1:} $n \equiv 0 \Mod{6}$
+
+    By Theorem 20, $n^3 \equiv 0^3 \Mod{6}$
+
+    Simplifying, $n^3 \equiv 0 \Mod{6}$
+
+    By Problem 5 Week 4, $n^3 \equiv n \Mod{6}$
+
+    By definition, $6 | (n^3 - n)$
+
+    \medskip
+
+    \textbf{Case 2:} $n \equiv 1 \Mod{6}$
+
+    By Theorem 20, $n^3 \equiv 1^3 \Mod{6}$
+
+    Simplifying, $n^3 \equiv 1 \Mod{6}$
+
+    By Problem 5 Week 4, $n^3 \equiv n \Mod{6}$
+
+    By definition, $6 | (n^3 - n)$
+
+    \medskip
+    
+    \textbf{Case 3:} $n \equiv 2 \Mod{6}$
+
+    By Theorem 20, $n^3 \equiv 2^3 \Mod{6}$
+
+    Simplifying, $n^3 \equiv 8 \Mod{6}$
+
+    Calculating, we have $8 \Mod{6} = 2$, and $2 \Mod{6} = 2$
+
+    Because of this equality and problem 5 week 4 part 3, $n^3 \equiv n \Mod{6}$
+
+    By definition, $6 | (n^3 - n)$
+
+    \medskip
+
+    \textbf{Case 4:} $n \equiv 3 \Mod{6}$
+
+    By Theorem 20, $n^3 \equiv 3^3 \Mod{6}$
+
+    Simplifying, $n^3 \equiv 27 \Mod{6}$
+
+    Using the division theorem, we have $27 \Mod{6} = 3 \Mod{6}$ because $27 = (3 * 6) + 3$
+
+    Because of this equality and problem 5 week 4 part 3, $n^3 \equiv n \Mod{6}$
+
+    By definition, $6 | (n^3 - n)$
+
+    \medskip
+
+    \textbf{Case 5:} $n \equiv 4 \Mod{6}$
+
+    By Theorem 20,  $n^3 \equiv 4^3 \Mod{6}$
+
+    Simplifying, $n^3 \equiv 64 \Mod{6}$
+
+    Using the division theorem, we have $64 \Mod{6} = 4 \Mod{6}$ because $64 = (10 * 6) + 4$
+
+    Because of this equality and problem 5 week 4 part 3, $n^3 \equiv n \Mod{6}$
+
+    By definition, $6 | (n^3 - n)$
+
+    \medskip
+
+    \textbf{Case 6:} $n \equiv 5 \Mod{6}$
+
+    By Theorem 20,  $n^3 \equiv 5^3 \Mod{6}$
+
+    Simplifying, $n^3 \equiv 125 \Mod{6}$
+
+    Using the division theorem, we have $125 \Mod{6} = 5 \Mod{6}$ because $125 = (20 * 6) + 5$
+
+    Because of this equality and problem 5 week 4 part 3, $n^3 \equiv n \Mod{6}$
+
+    By definition, $6 | (n^3 - n)$
+
+    \medskip
+    
+    We can see that regardless of the congruence class (and individual cases), we have 6 divides $(n^3 - n)$, when $n \in \mathbb{N}$.
 \end{proof}
 
 \end{document}
