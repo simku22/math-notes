@@ -1,0 +1,257 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts, amssymb, amsthm}
+\usepackage{amsmath}
+\usepackage{tikz}
+
+\pagestyle{myheadings}
+\markright{Simon Kurgan\hfill\today\hfill}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+
+\begin{document}
+
+\section{Introduction}
+\begin{theorem}
+\end{theorem}
+
+\begin{proof}[Proof:]
+    We prove this by induction.
+
+    Base case: $n = 0$
+
+    By definition of the fibonacci sequence, $f_{5(0)} = f_0 = 0$
+
+    Goal: Define that 0 is a multiple of 5.
+
+    By definition, $5 | 0$ implies $0 = 5 * q$ where $q \in \mathbb{Z}$
+
+    By theorem E8, q can be 0.
+
+    Thus, $5 | f_{0}$
+
+    \medbreak
+
+    Inductive Case: Suppose $f_{5k}$ is a multiple of $5$
+
+    By definition, $f_{5k} = 5 * q$, where $q \in \mathbb{Z}$
+
+    Goal: Show that $f_{5(k+1)}$ is a multiple of $5$
+
+    Working backwards, we can rewrite $f_{5(k+1)}$ as $f_{5k+5}$
+
+    Using the definition of the fibonacci sequence,
+
+    We can define, $f_{5k+5} = f_{5k+4} + f_{5k+3}$
+
+    $f_{5k+4} = f_{5k+3} + f_{5k+2}$
+
+    $f_{5k+3} = f_{5k+2} + f_{5k+1}$
+
+    $f_{5k+2} = f_{5k+1} + f_{5k}$
+
+    With some algebra, $f_{5k+5} = (f_{5k+3} + f_{5k+2}) + (f_{5k+2} + f_{5k+1})$
+
+    Simplifying, $(f_{5k+2} + f_{5k+1} + f_{5k+1} + f_{5k}) + (f_{5k+1} + f_{5k} + f_{5k+1})$
+
+    Further, $(f_{5k+1} + f_{5k} + f_{5k+1} + f_{5k+1} + f_{5k}) + (f_{5k+1} + f_{5k} + f_{5k+1})$
+
+    Finally, $5(f_{5k+1}) + 3(f_{5k})$
+
+    By our inductive hypothesis, we can rewrite $f_{5k}$ as $5 * q$, where $q \in \mathbb{Z}$
+
+    So we have, $5(f_{5k+1}) + (3)(5)(q)$, $q \in \mathbb{Z}$
+
+    Factoring, $5((f_{5k+1}) + (3)(q))$, $q \in \mathbb{Z}$
+
+    By definition, since 5 is a factor of our expression, it is a multiple of 5.
+
+\end{proof}
+
+\newpage
+
+\begin{theorem}
+\end{theorem}
+
+\begin{proof}[Proof:]
+    We prove this by strong induction.
+
+    Lets evaluate our base cases:
+
+    \medbreak
+
+    \textbf{Case 1:} n = 0
+
+    Working backwards, 
+
+    $f_0 = \frac{1}{\sqrt{5}} (\alpha^0 - \beta^0)$
+
+    By definition, the Fibonacci sequence defines $f_0 = 0$
+
+    Thus, $0 = \frac{1}{\sqrt{5}} (\alpha^0 - \beta^0)$
+
+    Rewriting, we have $0 = \frac{1}{\sqrt{5}} (1 - 1)$
+
+    Thus, $0 = \frac{1}{\sqrt{5}} (0)$
+
+    By E8, $0 = 0$
+
+    With context, we have shown that the first value of the fibonacci sequence $f_0$ is equivalent to $\frac{1}{\sqrt{5}} (\alpha^0 - \beta^0)$
+
+    \medbreak
+
+    \textbf{Case 2:} n = 1
+
+    Working backwards, 
+
+    Substituting, $f_1 = \frac{1}{\sqrt{5}} (\alpha^1 - \beta^1)$
+
+    By definition, the Fibonacci sequence defines $f_1 = 1$
+
+    Thus, $1 =  \frac{1}{\sqrt{5}} (\alpha^1 - \beta^1)$
+
+    Substituting, $1 =  \frac{1}{\sqrt{5}} (\frac{1 + \sqrt{5}}{2} - \frac{1 - \sqrt{5}}{2})$
+
+    Simplifying, $1 =  \frac{1}{\sqrt{5}} (\frac{1 + \sqrt{5} - (1 - \sqrt{5})}{2})$
+
+    $1 =  \frac{1}{\sqrt{5}} (\frac{1 + \sqrt{5} - 1 + \sqrt{5}}{2})$
+
+    $1 =  \frac{1}{\sqrt{5}} (\frac{2\sqrt{5}}{2})$
+
+    $1 =  \frac{1}{\sqrt{5}} (\sqrt{5})$
+
+    $1 = 1$
+
+    Thus, we have shown that $f_1 = \frac{1}{\sqrt{5}} (\alpha^1 - \beta^1)$
+
+    \medbreak
+
+    Inductive Step: Assume that \( f_k = \frac{1}{\sqrt{5}} (\alpha^k - \beta^k) \) holds for all \( 0 \leq k \leq n \), where \( n \geq 1 \).
+
+    Goal: Show that $f_{k+1} = \frac{1}{\sqrt{5}} (\alpha^{k+1} - \beta^{k+1})$
+
+    By the Fibonacci sequence, we can define $f_{k+1} = f_{k} + f_{k - 1}$
+
+    Using our inductive hypothesis, 
+    
+    $f_{k+1} = \frac{1}{\sqrt{5}}(\alpha^k - \beta^k) + \frac{1}{\sqrt{5}}(\alpha^{k-1} - \beta^{k-1})$
+
+    $= \frac{(\alpha^k - \beta^k)}{\sqrt{5}} + \frac{(\alpha^{k-1} - \beta^{k-1})}{\sqrt{5}}$
+
+    $= \frac{(\alpha^k - \beta^k + \alpha^{k-1} - \beta^{k-1})}{\sqrt{5}}$
+
+    $= \frac{(\alpha^k + \alpha^{k-1} - \beta^k - \beta^{k-1})}{\sqrt{5}}$
+
+    $= \frac{\alpha^{k-1}(1 + \alpha) - \beta^{k-1}(1 + \beta)}{\sqrt{5}}$
+
+    Substituting from our definitions, 
+    
+    $= \frac{\alpha^{k-1}(\alpha^2) - \beta^{k-1}(\beta^2)}{\sqrt{5}}$
+
+    Thus, $f_{k+1} = \frac{\alpha^{k+1} - \beta^{k+1}}{\sqrt{5}}$
+
+    Finally, $f_{k+1} = \frac{1}{\sqrt{5}}(\alpha^{k+1} - \beta^{k+1})$
+\end{proof}
+
+\newpage
+
+\begin{theorem}
+\end{theorem}
+
+\begin{proof}[Proof:]
+    We prove this by strong induction.
+
+    Lets evaluate our base cases:
+
+    \medbreak
+
+    \textbf{Case 1:} n = 1
+
+    $1 = (2k + 1)2^L$, where $k, L \in \mathbb{N}$
+
+    Suppose we have $k = 0$, $L = 0$.
+
+    $1 = (2(0) + 1)2^0$
+
+    Simplifying,  $1 = 1$
+
+    Thus, we have shown there exist a $k, L \in \mathbb{N}$ that satisfy the statement.
+
+    \medbreak
+
+    \textbf{Inductive Step:}
+
+    Suppose for $1 \leq n \leq b$, b can be written in the form $(2k + 1)2^L$, where $k, L \in \mathbb{N}$
+
+    Goal: Show that b + 1 can also be written as $(2k + 1)2^L$, where $k, L \in \mathbb{N}$
+
+    By theorem 16, b + 1 can either be even or odd. Thus we have two cases.
+
+    \medbreak
+
+    \textbf{Case 1:} b + 1 is even
+
+    By definition, b + 1 = 2q, where $q \in \mathbb{Z}$
+
+    Because q is less than b. By our hypothesis, $q = (2k + 1)2^L$, where $k, L \in \mathbb{N}$
+
+    Substituting we have our intended form, $b + 1 = 2((2k + 1)2^L)$
+
+    Further, $b + 1 = (2k + 1)2^{L + 1}$, where $k, L \in \mathbb{N}$
+
+    Thus we have shown that when n = b + 1, n can be written as the product of an odd number and a power of 2.
+
+    \medbreak
+
+    \textbf{Case 1:} b + 1 is odd
+
+    By definition, b + 1 = 2q + 1, where $q \in \mathbb{Z}$
+
+    Because q is less than b. By our hypothesis, $q = (2k + 1)2^L$, where $k, L \in \mathbb{N}$
+
+    Substituting, $b + 1 = 2((2k + 1)2^L) + 1$
+
+    By closure, $(2k + 1)2^L \in \mathbb{N}$ 
+
+    Rewriting, $b + 1 = 2(m) + 1$, where $m, b \in \mathbb{N}$
+
+    Because $2^0 = 1$, and $a * 1 = a$,
+
+    Further, $b + 1 = (2m + 1)(2^0)$
+
+    Thus we have shown that when n = b + 1, n can be written as the product of an odd number and a power of 2.
+
+    \medbreak
+
+\end{proof}
+
+\newpage
+
+\begin{theorem}
+\end{theorem}
+
+\medbreak
+
+(a) \( x \notin A \cap B \) if and only if \( x \notin A$ or $x \notin B \)
+
+Rationale: $x \in A \cap B \equiv x \in A \text{ and } x \in B$ 
+
+$\neg(x \in A \text{ and } x \in B) \equiv (x \notin A \text{ or } x \notin B)$
+
+\medbreak
+
+(b) \( x \notin A \cup B \) if and only if  \( x \notin A$ and $x \notin B \)
+
+Rationale: $x \in A \cap B \equiv x \in A \text{ or } x \in B$ 
+
+$\neg(x \in A \text{ or } x \in B) \equiv (x \notin A \text{ and } x \notin B)$
+
+\medbreak
+
+(c) \( x \notin A \setminus B \) if and only if \( x \notin A$ or $x \in B \)
+
+Rationale: $x \in A \setminus B \equiv x \in A \text{ and } x \notin B$ 
+
+$\neg(x \in A \text{ and } x \notin B) \equiv (x \notin A \text{ or } x \in B)$
+
+\end{document}
